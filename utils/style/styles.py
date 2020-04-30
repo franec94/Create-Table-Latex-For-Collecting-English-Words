@@ -1,4 +1,4 @@
-print(__doc__)
+print('File name: ' + __name__ + ', doc string: ', __doc__, sep='\n')
 
 # ------------------------------------------------------------- #
 # Packages, Libraries, Imports

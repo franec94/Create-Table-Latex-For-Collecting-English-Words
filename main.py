@@ -1,4 +1,4 @@
-print(__doc__)
+print('File name: ' + __name__ + ', doc string: ', __doc__, sep='\n')
 
 # ------------------------------------------------------------- #
 # Packages, Libraries, Imports
@@ -17,6 +17,12 @@ import yaml
 # Custom imports
 from utils.business import work 
 
+
+# ------------------------------------------------------------- #
+# Global variables
+# ------------------------------------------------------------- #
+
+STEP: int = 4
 
 # ------------------------------------------------------------- #
 # Main function
@@ -39,14 +45,15 @@ def main() -> None:
   # ------------------------------------------------------------- #
   tables = work.process_data(
     target_words=target_words,
-    step=4)
+    step=STEP,
+    max_len=max_len)
 
   # ------------------------------------------------------------- #
   # Write results as output data
   # ------------------------------------------------------------- #
   work.write_results(
     results=tables,
-    header_items=knwon_words)
+    header_items=knwon_words, step=STEP)
   pass
 
 
@@ -58,5 +65,8 @@ if __name__ == '__main__':
   # ------------------------------------------------------------- #
   # Main function: it starts work...
   # ------------------------------------------------------------- #
+  print()
+  print('Running program..')
+  print()
   main()
   pass
