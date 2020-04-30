@@ -1,0 +1,36 @@
+ & arise & arise & derive & appear & be born & result & rise & rise & occur & lift & wake & offer \\
+ &  rise &  rise &  result &  arise &  arise &  prove &  arise &  arise &  arise &  raise &  awake &  offer oneself \\
+ &  spring &  rise up &  arise &  report &  rise &  arise &  heave &  get up &  &  relieve &  rouse &  arise \\
+ &  crop up &  riot &  come &  turn up &  come &  emerge &  spring up &  take off &  &  rise &  arise &  \\
+ &  spring out &  &  stem &  spring up &  grow &  follow &  stir &  stand up &  &  hoist &  &  \\
+ &  &  &  follow &  &  originate &  come out &  shoot up &  &  &  arise &  &  \\
+
+
+\textbf{Sorgere} & \textbf{Insorgere} & \textbf{Derivare} & \textbf{Presentarsi} \\
+\hline
+arise & arise & derive & appear \\
+ rise &  rise &  result &  arise \\
+ spring &  rise up &  arise &  report \\
+ crop up &  riot &  come &  turn up \\
+ spring out &  &  stem &  spring up \\
+ &  &  follow &  \\
+
+
+\textbf{Nascere} & \textbf{Risultare} & \textbf{Alzarsi} & \textbf{Levarsi} \\
+\hline
+be born & result & rise & rise \\
+ arise &  prove &  arise &  arise \\
+ rise &  arise &  heave &  get up \\
+ come &  emerge &  spring up &  take off \\
+ grow &  follow &  stir &  stand up \\
+ originate &  come out &  shoot up &  \\
+
+
+\textbf{Sopravvenire} & \textbf{Sollevare} & \textbf{Svegliarsi} & \textbf{Offrirsi} \\
+\hline
+occur & lift & wake & offer \\
+ arise &  raise &  awake &  offer oneself \\
+ &  relieve &  rouse &  arise \\
+ &  rise &  arise &  \\
+ &  hoist &  &  \\
+ &  arise &  &  \\
