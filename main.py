@@ -1,43 +1,38 @@
-val="""sorgere\n
-arise, rise, spring, crop up, spring out\n
-insorgere\n
-arise, rise, rise up, riot\n
-derivare\n
-derive, result, arise, come, stem, follow\n
-presentarsi\n
-appear, arise, report, turn up, spring up\n
-nascere\n
-be born, arise, rise, come, grow, originate\n
-risultare\n
-result, prove, arise, emerge, follow, come out\n
-alzarsi\n
-rise, arise, heave, spring up, stir, shoot up\n
-levarsi\n
-rise, arise, get up, take off, stand up\n
-sopravvenire\n
-occur, arise\n
-sollevare\n
-lift, raise, relieve, rise, hoist, arise\n
-svegliarsi\n
-wake, awake, rouse, arise\n
-offrirsi\n
-offer, offer oneself, arise\n
-"""
+print(__doc__)
+
+# ------------------------------------------------------------- #
+# Packages, Libraries, Imports
 # ------------------------------------------------------------- #
 
-# print(val)
+from pprint import pprint
+
+import copy
+import datetime
+import json
+import os
+import sys
+import time
+import yaml
+
+
+# ------------------------------------------------------------- #
+# Prepare, Preprocess input data
+# ------------------------------------------------------------- #
+
+# From text corpus to list of list of strings
 res = val.split('\n')
-# print(res)
 res = filter(lambda xi: len(xi) > 0, res)
 res = list(res)
 
-italian_words = list(map(str.capitalize, res[0:-1:2]))
-english_words = res[1::2]
+# Divide words of a language to words of another
+# where the formers are well known, whereas the latters are target.
+knwon_words = list(map(str.capitalize, res[0:-1:2]))
+target_words = res[1::2]
 
-print(len(italian_words), len(english_words))
-assert len(italian_words) == len(english_words), 'different lenghts'
+msg_assert: str = 'len(italian_words) == len(english_words different lenghts'
+assert len(target_words) == len(knwon_words), msg_assert
 
-english_words = map(lambda xi: xi.strip().split(','), english_words)
+english_words = map(lambda xi: xi.strip().split(','), target_words)
 english_words = list(english_words)
 
 max_len = max(
@@ -63,7 +58,7 @@ from pprint import pprint
 val = list()
 for ii in range(max_len):
   res = list()
-  for jj in range(len(italian_words)):
+  for jj in range(len(knwon_words)):
     # print(english_words[jj][ii])
     res.append(english_words[jj][ii])
   res = ' & '.join([xi for xi in res])
@@ -75,10 +70,10 @@ with open('out.txt', "w") as f:
 
 # ------------------------------------------------------------- #
 print(max_len)
-print(italian_words)
+print(knwon_words)
 def bold_it(item):
   return '\\textbf{' + item + '}'
-italian_words = list(map(bold_it, italian_words))
+italian_words = list(map(bold_it, knwon_words))
 
 val = list()
 for ii in range(max_len):
@@ -87,7 +82,11 @@ for ii in range(max_len):
     # print(english_words[jj][ii])
     res.append(english_words[jj][ii])
   val.append(res)
+
 # ------------------------------------------------------------- #
+# Process, produce output, result data
+# ------------------------------------------------------------- #
+
 step = 4
 tables = list()
 for ii in range(0, len(english_words), step):
@@ -102,22 +101,31 @@ for ii in range(0, len(english_words), step):
     val.append(res)
   tables.append(val)
 
-
-pprint(tables)
-
-# import sys
-# sys.exit(0)
-
 tables_str = list()
 for table in tables:
   print('Processing...')
   table_str = list()
+  lens = list()
+  for ii in range(step):
+    print(table[0:-1][ii])
+    res = max(map(len, table[0:-1][ii]))
+    lens.append(res)
+  l = list()
+  for xx in lens:
+    l.append('%{}s'.format(xx))
+  res_x = ' & '.join([xi for xi in l])
+  print(res_x)
   for row in table:
-    res = ' & '.join([xi for xi in row])
+    # res = ' & '.join([xi for xi in row])
+    print(tuple(row))
+    res = copy.deepcopy(res_x) % tuple(row)
     table_str.append(res + ' \\\\\n')
   tables_str.append(table_str)
   pprint(table_str)
 
+# ------------------------------------------------------------- #
+# Write results as output data
+# ------------------------------------------------------------- #
 for ii, table in enumerate(tables_str):
   with open('out.txt'.format(str(ii)), "a") as f:
     print('write table on file...')
@@ -128,3 +136,18 @@ for ii, table in enumerate(tables_str):
     f.write(res + ' \\\\\n')
     f.write('\\hline\n')
     f.writelines(table)
+
+
+
+def main() -> None:
+  # ------------------------------------------------------------- #
+  # Read input data
+  # ------------------------------------------------------------- #
+
+  with open('input.txt') as f:
+    val = f.read()
+  pass
+
+
+if __name__ == '__main__':
+  pass

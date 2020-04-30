@@ -1,0 +1,25 @@
+val="""sorgere\n
+arise, rise, spring, crop up, spring out\n
+insorgere\n
+arise, rise, rise up, riot\n
+derivare\n
+derive, result, arise, come, stem, follow\n
+presentarsi\n
+appear, arise, report, turn up, spring up\n
+nascere\n
+be born, arise, rise, come, grow, originate\n
+risultare\n
+result, prove, arise, emerge, follow, come out\n
+alzarsi\n
+rise, arise, heave, spring up, stir, shoot up\n
+levarsi\n
+rise, arise, get up, take off, stand up\n
+sopravvenire\n
+occur, arise\n
+sollevare\n
+lift, raise, relieve, rise, hoist, arise\n
+svegliarsi\n
+wake, awake, rouse, arise\n
+offrirsi\n
+offer, offer oneself, arise\n
+"""
