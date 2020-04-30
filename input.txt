@@ -1,24 +1,32 @@
-sorgere
-arise, rise, spring, crop up, spring out
-insorgere
-arise, rise, rise up, riot\n
-derivare
-derive, result, arise, come, stem, follow
-presentarsi
-appear, arise, report, turn up, spring up
-nascere
-be born, arise, rise, come, grow, originate
-risultare
-result, prove, arise, emerge, follow, come out
-alzarsi
-rise, arise, heave, spring up, stir, shoot up
-levarsi
-rise, arise, get up, take off, stand up
-sopravvenire
-occur, arise
-sollevare
-lift, raise, relieve, rise, hoist, arise
-svegliarsi
-wake, awake, rouse, arise
-offrirsi
-offer, offer oneself, arise
+lo sguardo
+look, glance, eye, sight
+lo aspetto
+aspect, appearance, look, respect, feature, side
+le occhiata
+look, glance, glimpse, peek, peep, blink
+aria
+air, aria, look, tune, expression, airing
+la faccia
+face, side, look, aspect, countenance, expression
+la cera
+wax, polish, look, mien
+la espressione
+expression, phrase, look, utterance, wording, countenance
+il piglio
+look
+guardare
+look, watch, look at, see, view, look on
+sembrare
+seem, look, appear, sound, feel, think
+apparire
+appear, look, show, pop up, manifest, dawn
+parere
+think, seem, look, appear
+dimostrare
+demonstrate, prove, show, establish, argue, look
+essere esposto a
+look
+dare su
+look
+dare un'occhiata
+run through, scan, look, glance
